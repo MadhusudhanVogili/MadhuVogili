@@ -22,13 +22,18 @@ public class SignIn_Action {
 		
 	
 				 
-	     Home_Page.lnk_MyAccount(driver).click();
+	     Home_Page.lnk_MyAccount(driver);
+	     
+	     Home_Page.click();
 
-		 LogIn_Page.txtbx_UserName(driver).sendKeys(sUserName);
+		 LogIn_Page.txtbx_UserName(driver);
+		 LogIn_Page.sendKeys(sUserName);
 		 
-		 LogIn_Page.txtbx_Password(driver).sendKeys(sPassword);
+		 LogIn_Page.txtbx_Password(driver);
+		 LogIn_Page.sendKeys(sPassword);
 		 
-		 LogIn_Page.btn_LogIn(driver).click();
+		 LogIn_Page.btn_LogIn(driver);
+		 LogIn_Page.click();
 		 
 		        }
 		 

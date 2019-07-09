@@ -40,7 +40,8 @@ public static void main(String[] args) throws Exception {
 
        System.out.println("Login Successfully, now it is the time to Log Off buddy.");
 
-       Home_Page.lnk_LogOut(driver).click()
+       Home_Page.lnk_LogOut(driver);
+       Home_Page.click();
 
        driver.quit();
 

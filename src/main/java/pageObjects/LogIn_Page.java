@@ -29,6 +29,16 @@ public class LogIn_Page {
 		return null;
 	}
 
+	public static void sendKeys(String sUserName) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public static void click() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 
 	

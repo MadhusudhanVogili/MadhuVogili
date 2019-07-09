@@ -12,6 +12,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import org.apache.poi.ss.usermodel.Row.MissingCellPolicy;
+
 public class ExcelUtils {
 	private static XSSFSheet ExcelWSheet;
 	 
@@ -20,6 +22,10 @@ public class ExcelUtils {
     private static XSSFCell Cell;
 
     private static XSSFRow Row;
+   
+    
+    
+
 
 //This method is to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method
 
@@ -67,14 +73,17 @@ return"";
 //This method is to write in the Excel cell, Row num and Col num are the parameters
 
 public static void setCellData(String Result,  int RowNum, int ColNum) throws Exception {
+	  
 
   try{
 	  
 
       Row  = ExcelWSheet.getRow(RowNum);	
 
-Cell = Row.getCell(ColNum, Row.RETURN_BLANK_AS_NULL);
+Cell = Row.getCell(ColNum, MissingCellPolicy.RETURN_BLANK_AS_NULL);
+//org.apache.poi.ss.usermodel.Row.MissingCellPolicy.RETURN_BLANK_AS_NULL;
 
+      
 if (Cell == null) {
 
 Cell = Row.createCell(ColNum);
